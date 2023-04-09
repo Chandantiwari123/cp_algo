@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Mr. JavaScript</title>
+    </head>
+    <body>
+        <h1>I'm Mr. JavaScript</h1>
+        <a href="#" class="reset">Reset</a>
+        <a href="#" class="howareyou">Hey JavaScript, how ya feeling?</a>
+        <script type="text/javascript">
+            console.log("Everything is great");
+
+        var reset = document.querySelector(".reset");
+
+		reset.addEventListener('click',function(){
+
+			var h1 = document.querySelector("h1");
+			h1.innerHTML = "I'm Mr. JavaScript";
+			console.log(h1);
+
+		});
+            var a = document.querySelector(".howareyou");   // It can grab class too.
+            
+            a.addEventListener('click',function() {     // when we click then inside the function stuff will happen
+                alert("We are inside listener");
+
+                var h1 = document.querySelector("h1")    // here we just grab the h1.
+                h1.innerHTML = "I'm alive!";
+                console.log(h1);
+            });     
+
+        </script>
+    </body>
+</html>
